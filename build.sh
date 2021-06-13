@@ -1,7 +1,7 @@
 #!/bin/sh
 
 WORK_DIR=`pwd`
-DIST_DIR="/Data/Port/BB10/BB10-tools/Downloads/src"
+DIST_DIR="/Data/Port/BB10/bb10-gcc9/Downloads/"
 SRC_DIR="${WORK_DIR}/src"
 mkdir -p ${DIST_DIR} ${SRC_DIR}
 
