@@ -2,13 +2,13 @@
 
 export GCC_VER="9.3.0"
 
-APP_ROOT="${HOME}/Apps"
+APP_ROOT="/Data/Port/BB10"
 BBNDK_ROOT="${APP_ROOT}/bbndk"
 export BBNDK_TARGET="${BBNDK_ROOT}/target_10_3_1_995/qnx6"
 export BBNDK_HOST="${BBNDK_ROOT}/host_10_3_1_12/linux/x86"
 export BBNDK_ABI="arm-unknown-nto-qnx8.0.0eabi"
 
-BBNDK_HOST_OS="i686-pc-linux-gnu"
+BBNDK_HOST_OS="x86_64-unknown-haiku"
 
 HOST_OS=`uname -s | tr '[:upper:]' '[:lower:]'`
 HOST_ARCH=`uname -m`
@@ -21,7 +21,7 @@ x86)
 	HOST_LIBNAME="lib"
 	;;
 x86_64)
-	HOST_LIBNAME="lib64"
+	HOST_LIBNAME="lib" # Haiku is single-arch, no need for lib64
 	;;
 esac
 export ${HOST_LIBNAME}
